@@ -1,0 +1,44 @@
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/about.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img src="img/aquabiteslogo1.png" alt="AquaBites Logo">
+                <span class="logo-text">AquaBites</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Logo Above Typewriter -->
+        <div class="center-logo">
+            <img src="img/aquabiteslogo1.png" alt="AquaBites Logo">
+        </div>
+        <h1 id="typewriterText"></h1>
+        <div class="card">
+            <body>
+                At AquaBites, we are dedicated to supporting sustainable fishing practices in line with Sustainable Development Goal (SDG) 14.4, which aims to effectively regulate harvesting and end overfishing. Our mission is to promote responsible seafood consumption, protect marine biodiversity, and ensure the long-term health of ocean ecosystems.
+            </body>
+        </div>
+        <script>
+            const text = "AquaBites";
+            let i = 0;
+            function typeWriter() {
+                 if (i < text.length) {
+                    document.getElementById("typewriterText").innerHTML += text.charAt(i);
+                    i++;
+                setTimeout(typeWriter, 100);
+                } else {
+                document.getElementById("typewriterText").classList.add("move-up");
+                }
+            }
+            window.onload = typeWriter;
+        </script>
+    </body>
+</html>
